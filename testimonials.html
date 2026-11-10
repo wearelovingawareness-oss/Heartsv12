@@ -233,6 +233,7 @@
 <style id="tcard-css">.tcard{transition:transform .35s ease,box-shadow .35s ease!important;}.tcard:hover{transform:scale(1.025)!important;box-shadow:0 20px 44px rgba(20,50,80,.35);position:relative;z-index:2;}</style>
 <style id="mm-acc">.mm{justify-content:flex-start!important;gap:22px!important;padding:120px 24px 48px;overflow-y:auto;box-sizing:border-box}.mm a,.mm summary{font-size:30px!important}.mm details{display:flex;flex-direction:column;align-items:center;text-align:center}.mm summary{list-style:none;cursor:pointer;font-family:'Cormorant Garamond',serif;font-weight:400;color:#1C1C1A;display:inline-flex;align-items:center;gap:10px}.mm summary::-webkit-details-marker{display:none}.mm summary .mm-arr{font-size:14px;color:#B07845;transition:transform .2s}.mm details[open] .mm-arr{transform:rotate(180deg)}.mm .mm-sub{display:flex;flex-direction:column;align-items:center;gap:12px;padding:14px 0 6px}.mm .mm-sub a{font-family:'Manrope',sans-serif!important;font-size:13px!important;letter-spacing:.12em;text-transform:uppercase;color:#7A5A3A!important}</style>
 <style id="mobile-polish">@media(max-width:768px){[style*="font-size:9px"],[style*="font-size:10px"]{font-size:11px!important}[style*="font-size:72px"]{font-size:52px!important}.vol-grid{grid-template-columns:1fr!important}.vol-grid>div{padding:32px 26px!important}}</style>
+<style>@media(max-width:900px){.vt-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}.vt-grid>div:hover .vt-play{transform:scale(1.08)}.vt-grid>div[data-started] .vt-play{opacity:0}.vt-grid>div[data-started] .vt-hit{bottom:56px!important}.vt-video:fullscreen{object-fit:contain!important;background:#000!important}.vt-video:-webkit-full-screen{object-fit:contain!important;background:#000!important}</style>
 </helmet>
 
 <!-- NAV -->
@@ -269,19 +270,46 @@
   <a href="get-involved.html#koha"><span class="mm-reo">Koha</span>Donate</a>
 </div>
 
-<div style="background:linear-gradient(rgba(14,28,20,.62),rgba(14,28,20,.62)),url('bush-bg.jpg?v=2') center top/cover no-repeat #3D5240;">
+<div style="background:linear-gradient(to bottom,rgba(14,28,20,0) 0,rgba(14,28,20,0) calc(max(100vw,1600px)*.4),#13221A calc(max(100vw,1600px)*.6)),linear-gradient(rgba(14,28,20,.62),rgba(14,28,20,.62)),url('bush-bg.jpg?v=2') center top/max(100vw,1600px) auto no-repeat #13221A;">
 <!-- HEADER -->
 <section style="padding:170px 0 0;background:transparent;text-align:center;animation:fU 1s ease both;">
   <p style="font-size:13px;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:#E0B58A;margin-bottom:2px;">He Kōrero Tuku Iho</p>
   <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(52px,7vw,88px);font-weight:300;color:#fff;letter-spacing:-.02em;line-height:1.05;margin-bottom:24px;">Testimonials</h1>
   <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,22px);font-style:italic;color:rgba(255,255,255,.9);max-width:600px;margin:0 auto;line-height:1.6;">We would like to give you a glimpse of some of the experiences, insights, shifts, empowerment and prospects people have gone away with after connecting with our herd and their core self.</p>
-<div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-top:30px;"><div style="width:60px;height:1px;background:rgba(255,255,255,.35);"></div><div style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.55);"></div><div style="width:60px;height:1px;background:rgba(255,255,255,.35);"></div></div>
+</section>
+
+<!-- VIDEO TESTIMONIALS -->
+<section style="background:transparent;padding:40px 0 0;">
+  <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
+    <div class="vt-grid" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;">
+      <div data-reveal style="position:relative;aspect-ratio:9/16;background:#14100C;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.35);">
+        <video class="vt-video" src="testimonial-video-3.mp4" poster="testimonial-poster-3.jpg" playsinline="playsinline" preload="none" style="cursor:pointer;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#14100C;"></video>
+        <span class="vt-play" aria-hidden="true" style="position:absolute;top:50%;left:50%;width:0;height:0;margin:-22px 0 0 -14px;border-style:solid;border-width:22px 0 22px 36px;border-color:transparent transparent transparent rgba(255,255,255,.72);filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));pointer-events:none;transition:opacity .3s ease,transform .3s ease;"></span>
+        <span class="vt-hit" aria-label="Play or pause video" role="button" style="position:absolute;top:0;left:0;right:0;bottom:0;cursor:pointer;z-index:1;"></span>
+      </div>
+      <div data-reveal data-d="1" style="position:relative;aspect-ratio:9/16;background:#14100C;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.35);">
+        <video class="vt-video" src="testimonial-video-1.mp4" poster="testimonial-poster-1.jpg" playsinline="playsinline" preload="none" style="cursor:pointer;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#14100C;"></video>
+        <span class="vt-play" aria-hidden="true" style="position:absolute;top:50%;left:50%;width:0;height:0;margin:-22px 0 0 -14px;border-style:solid;border-width:22px 0 22px 36px;border-color:transparent transparent transparent rgba(255,255,255,.72);filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));pointer-events:none;transition:opacity .3s ease,transform .3s ease;"></span>
+        <span class="vt-hit" aria-label="Play or pause video" role="button" style="position:absolute;top:0;left:0;right:0;bottom:0;cursor:pointer;z-index:1;"></span>
+      </div>
+      <div data-reveal data-d="2" style="position:relative;aspect-ratio:9/16;background:#14100C;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.35);">
+        <video class="vt-video" src="testimonial-video-2.mp4" poster="testimonial-poster-2.jpg" playsinline="playsinline" preload="none" style="cursor:pointer;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#14100C;"></video>
+        <span class="vt-play" aria-hidden="true" style="position:absolute;top:50%;left:50%;width:0;height:0;margin:-22px 0 0 -14px;border-style:solid;border-width:22px 0 22px 36px;border-color:transparent transparent transparent rgba(255,255,255,.72);filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));pointer-events:none;transition:opacity .3s ease,transform .3s ease;"></span>
+        <span class="vt-hit" aria-label="Play or pause video" role="button" style="position:absolute;top:0;left:0;right:0;bottom:0;cursor:pointer;z-index:1;"></span>
+      </div>
+      <div data-reveal data-d="3" style="position:relative;aspect-ratio:9/16;background:#14100C;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.35);">
+        <video class="vt-video" src="testimonial-video-4.mp4" poster="testimonial-poster-4.jpg" playsinline="playsinline" preload="none" style="cursor:pointer;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#14100C;"></video>
+        <span class="vt-play" aria-hidden="true" style="position:absolute;top:50%;left:50%;width:0;height:0;margin:-22px 0 0 -14px;border-style:solid;border-width:22px 0 22px 36px;border-color:transparent transparent transparent rgba(255,255,255,.72);filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));pointer-events:none;transition:opacity .3s ease,transform .3s ease;"></span>
+        <span class="vt-hit" aria-label="Play or pause video" role="button" style="position:absolute;top:0;left:0;right:0;bottom:0;cursor:pointer;z-index:1;"></span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FEATURED TESTIMONIAL -->
 <section style="background:transparent;padding:0 0 100px;">
   <div class="cw" style="max-width:860px;margin:0 auto;padding:0 56px;text-align:center;">
-    <span style="font-family:'Cormorant Garamond',serif;font-size:72px;line-height:.55;color:rgba(255,255,255,.15);display:block;margin:22px 0 4px;">"</span>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:72px;line-height:.55;color:rgba(255,255,255,.15);display:block;margin:36px 0 0;">"</span>
     <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.5vw,30px);font-weight:300;font-style:italic;color:white;line-height:1.65;margin-bottom:36px;">They do this in a calm and gentle way, giving the clients an experience of their inner world without imposing their own views or issues upon them. Jenny also has a spiritual insight, laying behind the work, but without interfering with clients who don't share this dimension.</p>
     <div style="width:40px;height:1px;background:rgba(255,255,255,.4);margin:0 auto 20px;"></div>
     <p style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);">Child Psychiatrist (Norway) · Visiting Practitioner to the H.E.A.R.T.S. Medicine Circle, Aotearoa</p>
@@ -439,5 +467,52 @@ document.addEventListener('click',function(ev){var e=els();if(!e.b||!e.mm||inner
 document.addEventListener('keydown',function(ev){if(ev.key==='Escape')close();});
 addEventListener('scroll',function(){if(innerWidth>=769)close();},{passive:true});})();</script>
 <style id="mm-center">@media(max-width:768px){html body #hn-mm.mm{justify-content:safe center!important;align-items:center!important;padding:110px 24px 40px!important;overflow-y:auto}html body #hn-close{display:none!important}}</style>
+<script>(function(){
+function isV(v){return v&&v.classList&&v.classList.contains("vt-video");}
+function mobile(){return window.matchMedia("(max-width:768px), (pointer:coarse)").matches;}
+var modal,box,mv,hit,tri,xb,nav,savedY=0,isFull=false,cur=0;
+function list(){return [].slice.call(document.querySelectorAll(".vt-video"));}
+var busy=false;
+function load(v){mv.pause();mv.removeAttribute("src");mv.load();mv.poster=v.getAttribute("poster")||"";mv.src=v.getAttribute("src");mv.muted=false;tri.style.opacity="0";var p=mv.play();if(p&&p.catch)p.catch(function(){tri.style.opacity="1";});}
+function show(i,dir){var L=list();if(!L.length||busy)return;cur=(i%L.length+L.length)%L.length;var v=L[cur];
+  if(!dir){load(v);return;}busy=true;mv.pause();
+  box.style.transition="opacity .22s ease";box.style.opacity="0";
+  setTimeout(function(){var shown=false;function reveal(){if(shown)return;shown=true;mv.removeEventListener("playing",reveal);mv.removeEventListener("loadeddata",reveal);box.style.opacity="1";setTimeout(function(){box.style.transition="";busy=false;},240);}
+    mv.addEventListener("playing",reveal);mv.addEventListener("loadeddata",reveal);load(v);setTimeout(reveal,900);},230);}
+function keep(){var y=savedY;window.scrollTo(0,y);requestAnimationFrame(function(){window.scrollTo(0,y)});setTimeout(function(){window.scrollTo(0,y)},120);setTimeout(function(){window.scrollTo(0,y)},400);}
+function exitNative(){var f=document.fullscreenElement||document.webkitFullscreenElement;if(f){if(document.exitFullscreen)document.exitFullscreen().catch(function(){});else if(document.webkitExitFullscreen)document.webkitExitFullscreen();}}
+function closeModal(){if(!modal||modal.style.display!=="flex")return;exitNative();mv.pause();mv.removeAttribute("src");mv.load();modal.style.opacity="0";setTimeout(function(){modal.style.display="none";},250);keep();}
+function toggle(){if(mv.paused){var p=mv.play();if(p&&p.catch)p.catch(function(){});}else mv.pause();}
+function build(){
+  modal=document.createElement("div");modal.setAttribute("role","dialog");modal.setAttribute("aria-label","Video");
+  modal.style.cssText="position:fixed;inset:0;z-index:2000;overflow:hidden;display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .25s ease;";
+  box=document.createElement("div");box.style.cssText="position:relative;background:#000;";
+  mv=document.createElement("video");mv.controls=false;mv.playsInline=true;mv.setAttribute("playsinline","");mv.style.cssText="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;";
+  hit=document.createElement("div");hit.style.cssText="position:absolute;inset:0;cursor:pointer;z-index:1;";
+  tri=document.createElement("span");tri.style.cssText="position:absolute;top:50%;left:50%;width:0;height:0;margin:-26px 0 0 -16px;border-style:solid;border-width:26px 0 26px 42px;border-color:transparent transparent transparent rgba(255,255,255,.75);filter:drop-shadow(0 2px 10px rgba(0,0,0,.4));pointer-events:none;z-index:2;opacity:0;transition:opacity .25s ease;";
+  xb=document.createElement("button");xb.setAttribute("aria-label","Close video");xb.innerHTML="&#10005;";xb.style.cssText="position:absolute;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.55);color:#fff;font-size:18px;cursor:pointer;z-index:3;";
+  hit.onclick=function(ev){ev.preventDefault();ev.stopPropagation();toggle();};
+  mv.addEventListener("play",function(){tri.style.opacity="0";});mv.addEventListener("pause",function(){tri.style.opacity="1";});mv.addEventListener("ended",function(){tri.style.opacity="1";});
+  xb.onclick=function(ev){ev.stopPropagation();closeModal();};modal.onclick=function(ev){if(ev.target===modal)closeModal();};
+  nav=document.createElement("div");nav.style.cssText="position:absolute;left:16px;right:16px;bottom:max(18px, env(safe-area-inset-bottom));display:flex;justify-content:space-between;z-index:3;pointer-events:none;";
+  [[-1,'Previous video','15 18 9 12 15 6'],[1,'Next video','9 18 15 12 9 6']].forEach(function(a){var b=document.createElement("button");b.setAttribute("aria-label",a[1]);b.innerHTML='<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="'+a[2]+'"></polyline></svg>';b.style.cssText="width:44px;height:44px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;pointer-events:auto;filter:drop-shadow(0 1px 4px rgba(0,0,0,.6));";b.onclick=function(ev){ev.stopPropagation();show(cur+a[0],a[0]);};nav.appendChild(b);});
+  box.appendChild(mv);box.appendChild(hit);box.appendChild(tri);box.appendChild(nav);modal.appendChild(box);modal.appendChild(xb);document.body.appendChild(modal);
+  document.addEventListener("keydown",function(ev){if(ev.key==="Escape")closeModal();if(modal.style.display==="flex"){if(ev.key===" "){ev.preventDefault();toggle();}if(ev.key==="ArrowRight")show(cur+1,1);if(ev.key==="ArrowLeft")show(cur-1,-1);}});}
+function openModal(src,poster,full){
+  if(!modal)build();isFull=full;
+  modal.style.background=full?"#000":"rgba(8,12,10,.88)";
+  if(full){box.style.cssText="position:relative;background:#000;width:100%;height:100%;overflow:hidden;";}
+  else{box.style.cssText="position:relative;background:#000;height:min(100vh,calc(100vw*16/9));height:min(100dvh,calc(100vw*16/9));aspect-ratio:9/16;max-width:100vw;overflow:hidden;";}
+  xb.style.top=full?"max(14px, env(safe-area-inset-top))":"22px";xb.style.right=full?"14px":"26px";xb.style.background=full?"rgba(0,0,0,.45)":"transparent";
+  mv.style.transition="none";mv.style.transform="none";mv.style.opacity="1";box.style.transform="none";box.style.opacity="1";busy=false;
+  mv.poster=poster||"";mv.src=src;mv.muted=false;tri.style.opacity="0";modal.style.display="flex";requestAnimationFrame(function(){modal.style.opacity="1";});
+  var p=mv.play();if(p&&p.catch)p.catch(function(){tri.style.opacity="1";});keep();}
+document.addEventListener("click",function(e){var h=e.target&&e.target.closest&&e.target.closest(".vt-hit");if(!h)return;e.preventDefault();savedY=window.scrollY;var v=h.parentNode.querySelector(".vt-video");if(!v)return;
+  document.querySelectorAll(".vt-video").forEach(function(o){o.pause()});
+  var full=mobile();openModal(v.getAttribute("src"),v.getAttribute("poster"),full);cur=list().indexOf(v);
+  if(full){try{if(box.requestFullscreen)box.requestFullscreen().catch(function(){});else if(box.webkitRequestFullscreen)box.webkitRequestFullscreen();}catch(_){}}});
+function fsChange(){keep();var f=document.fullscreenElement||document.webkitFullscreenElement;if(!f&&isFull&&modal&&modal.style.display==="flex")closeModal();}
+document.addEventListener("fullscreenchange",fsChange);document.addEventListener("webkitfullscreenchange",fsChange);
+})();</script>
 </body>
 </html>

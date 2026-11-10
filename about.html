@@ -60,7 +60,7 @@
     @keyframes fU{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
     @media(max-width:900px){
       .nl{display:none!important}.nb{display:flex!important}
-      .tc{flex-direction:column!important}
+      .tc{flex-direction:column!important}.tc>.tc-full{width:100%!important}
       .cw{padding-left:24px!important;padding-right:24px!important}
       .ftc{flex-direction:column!important;gap:40px!important}
       .sp{padding:80px 0!important}
@@ -248,7 +248,7 @@
   </a>
   <div class="nl" style="display:flex;align-items:center;gap:32px;">
     <div class="dd"><span class="na dd-label" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#C4824A;cursor:pointer;display:inline-flex;align-items:center;gap:3px;">About<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="mission.html">Our Mission</a><a href="about.html">About &amp; Values</a><a href="team.html">Our Team &amp; Horses</a></div></div>
-    <div class="dd"><span class="na dd-label" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;cursor:pointer;display:inline-flex;align-items:center;gap:3px;">Our Work<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="services.html">Services</a><a href="programs.html">Programs</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></div>
+    <div class="dd"><span class="na dd-label" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;cursor:pointer;display:inline-flex;align-items:center;gap:3px;">Our Work<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="services.html">Services</a><a href="programs.html">Programmes</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></div>
     <a href="testimonials.html" class="na" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;transition:all .3s;">Testimonials</a>
     <a href="index.html#contact-section" class="na" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;transition:all .3s;">Contact</a>
   </div>
@@ -264,7 +264,7 @@
   <button id="hn-close" style="position:absolute;top:28px;right:32px;background:none;border:none;font-size:28px;color:#9B8B7B;cursor:pointer;line-height:1;">✕</button>
   <a href="index.html"><span class="mm-reo">Nau Mai</span>Welcome</a>
   <details><summary><span class="mm-reo">Mō Mātou</span>About<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="mission.html">Our Mission</a><a href="about.html">About &amp; Values</a><a href="team.html">Our Team &amp; Horses</a></div></details>
-  <details><summary><span class="mm-reo">Ā Mātou Mahi</span>Our Work<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="services.html">Services</a><a href="programs.html">Programs</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></details>
+  <details><summary><span class="mm-reo">Ā Mātou Mahi</span>Our Work<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="services.html">Services</a><a href="programs.html">Programmes</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></details>
   <a href="testimonials.html"><span class="mm-reo">Ngā Kupu Tautoko</span>Testimonials</a>
   <details><summary><span class="mm-reo">Whakapā Mai</span>Contact<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="index.html#contact-section">Contact Us</a><a href="index.html#contact-section" data-subject="Te Mauri Whakapapa o te Hōiho Wānanga">Te Mauri Whakapapa o te Hōiho Wānanga</a><a href="index.html#contact-section" data-subject="Professional Training / Supervision">Professional Training &amp; Supervision</a><a href="index.html#contact-section" data-subject="Workshops & Retreats">Workshops &amp; Retreats</a><a href="get-involved.html#volunteer">Volunteering</a><a href="index.html#contact-section" data-subject="Koha / Donation">Support Us / Koha</a><a href="index.html#contact-section" data-subject="General Enquiry">General Enquiry</a></div></details>
   <a href="get-involved.html#koha"><span class="mm-reo">Koha</span>Donate</a>
@@ -277,8 +277,10 @@
       <div style="animation:fU 1s ease both;">
         <p style="font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#B07845;margin-bottom:20px;">Mō Mātou</p>
         <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(52px,6vw,80px);font-weight:300;color:#1C1C1A;letter-spacing:-.02em;line-height:1.06;margin-bottom:36px;">About<br>H.E.A.R.T.S.</h1>
-        <p style="font-size:15px;line-height:1.9;color:#5A524A;font-weight:300;max-width:480px;margin-bottom:32px;">H.E.A.R.T.S. Charitable Trust was born from a deep conviction that healing is not a clinical procedure — it is a living, relational, and culturally rooted experience.</p>
-        <p style="font-size:15px;line-height:1.9;color:#5A524A;font-weight:300;max-width:480px;">We exist for those who need to be met exactly where they are: with dignity, warmth, and an understanding that their story — and the stories carried in their whakapapa — matters.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;max-width:520px;margin-bottom:18px;">H.E.A.R.T.S. Charitable Trust is grounded in a deep understanding that healing is not something done to people. It is a living, relational process that unfolds when people feel safe, seen, and connected to themselves, others, and the world around them.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;max-width:520px;margin-bottom:18px;">We meet each person where they are, with dignity, warmth, and an understanding that every person carries a unique story, shaped by their experiences, relationships, and whakapapa.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;max-width:520px;margin-bottom:18px;">At H.E.A.R.T.S., we recognise that trauma affects more than the mind alone. It can disrupt connection to self, whānau, culture, community, and whenua. Our approach honours the whole person, recognising that meaningful healing can emerge through relationship, belonging, and reconnection.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;max-width:520px;">By weaving together the wisdom of horses, Te Ao Māori, trauma-informed relational practice, and systemic understanding, we create spaces where people can remember who they are, nurture mauri, strengthen mana, and move towards lives of greater wellbeing and possibility.</p>
       </div>
     </div>
     <div style="flex:1;overflow:hidden;min-height:600px;position:relative;">
@@ -287,39 +289,42 @@
   </div>
 </section>
 
-<!-- MŌ MĀTOU — ABOUT HEARTS -->
-<section class="sp" style="background:#FDFAF6;padding:120px 0 100px;">
-  <div class="cw" style="max-width:1000px;margin:0 auto;padding:0 56px;">
-    <div data-reveal style="margin-bottom:52px;">
-      <p style="font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:18px;">Mō Mātou</p>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.4vw,56px);font-weight:400;color:#1C1C1A;line-height:1.12;letter-spacing:-.015em;">About HEARTS</h2>
-    </div>
-    <div data-reveal data-d="1" style="max-width:820px;">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.2vw,27px);font-weight:300;color:#3A3530;line-height:1.6;margin-bottom:26px;text-wrap:pretty;">H.E.A.R.T.S. Charitable Trust was born from a deep conviction that healing is not simply a clinical procedure — it is a living, relational, and culturally grounded experience.</p>
-      <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;text-wrap:pretty;">We exist for those who need to be met exactly where they are: with dignity, warmth, and an understanding that their story — and the stories carried through their whakapapa — matter.</p>
-      <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;">Through relational horse–human experiences, we create space for tangata and whānau to reconnect with themselves, each other, their whakapapa, and whenua. In these moments of kotahitanga — unity between people and horses — individuals rediscover connection, belonging, and resilience that can support lasting change.</p>
-    </div>
-  </div>
-</section>
-
 <!-- WHO / WHO / WHAT -->
-<section class="sp" style="background:#FDFAF6;padding:0 0 120px;">
+<section class="sp" style="background:#FDFAF6;padding:120px 0;">
   <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
-    <div class="tc" style="display:flex;gap:3px;">
-      <div data-reveal style="flex:1;padding:52px 44px;background:white;border:1px solid #EDE4D8;">
-        <p style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:22px;">01</p>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:#1C1C1A;margin-bottom:18px;">Who We Are</h3>
-        <p style="font-size:14px;line-height:1.85;color:#5A524A;font-weight:300;text-wrap:pretty;">A charitable trust grounded in the belief that healing is relational, embodied, and culturally rooted.</p>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <div data-reveal class="tc" style="display:flex;gap:56px;padding:56px 56px;background:white;border:1px solid #EDE4D8;">
+        <div class="tc-full" style="width:240px;flex-shrink:0;">
+          <p style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:18px;">01</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:#1C1C1A;line-height:1.15;margin:0;">Who We Are</h3>
+        </div>
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:16px;">
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">A sacred space for reconnection, guided by tikanga Māori and trauma-informed relational practice.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">We understand that healing does not happen in isolation. We are deeply connected to the herd, the whenua, our whakapapa, and one another.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">Through the wisdom of the horse–human relationship, we support the restoration of connection, dignity, and wellbeing, creating pathways towards belonging, resilience, and hope.</p>
+        </div>
       </div>
-      <div data-reveal data-d="1" style="flex:1;padding:52px 44px;background:white;border:1px solid #EDE4D8;">
-        <p style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:22px;">02</p>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:#1C1C1A;margin-bottom:18px;">Who We Serve</h3>
-        <p style="font-size:14px;line-height:1.85;color:#5A524A;font-weight:300;text-wrap:pretty;">People and whānau seeking dignity, reconnection, and a place where their stories and whakapapa are honoured.</p>
+      <div data-reveal data-d="1" class="tc" style="display:flex;gap:56px;padding:56px 56px;background:white;border:1px solid #EDE4D8;">
+        <div class="tc-full" style="width:240px;flex-shrink:0;">
+          <p style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:18px;">02</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:#1C1C1A;line-height:1.15;margin:0;">Who We Serve</h3>
+        </div>
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:16px;">
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">We walk alongside rangatahi, whānau, and individuals navigating trauma, loss, grief, adversity, or disconnection.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">We welcome those seeking to reconnect with themselves, strengthen relationships, restore wellbeing, and rediscover their sense of belonging. Through the wisdom of the herd, the grounding presence of whenua, and the relationships that surround us, we create space for reconnection, growth, and renewed possibility.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">Whether you arrive through personal choice, whānau support, or clinical referral, you will be met with compassion, respect, and an unwavering belief in your inherent worth.</p>
+        </div>
       </div>
-      <div data-reveal data-d="2" style="flex:1;padding:52px 44px;background:white;border:1px solid #EDE4D8;">
-        <p style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:22px;">03</p>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;color:#1C1C1A;margin-bottom:18px;">What We Do</h3>
-        <p style="font-size:14px;line-height:1.85;color:#5A524A;font-weight:300;text-wrap:pretty;">We offer relational horse–human experiences that support reconnection with self, whānau, whakapapa, and whenua — restoring belonging, resilience, and kotahitanga.</p>
+      <div data-reveal data-d="2" class="tc" style="display:flex;gap:56px;padding:56px 56px;background:white;border:1px solid #EDE4D8;">
+        <div class="tc-full" style="width:240px;flex-shrink:0;">
+          <p style="font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:18px;">03</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:#1C1C1A;line-height:1.15;margin:0;">What We Do</h3>
+        </div>
+        <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:16px;">
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">We create spaces where connection can be restored and healing can emerge through relationship. Guided by the wisdom of ngā hōiho and held within the medicine circle, people are invited to reconnect with themselves, their whānau, their whakapapa, and the wider woven universe of which they are a part.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">Grounded in tikanga Māori, trauma-informed practice, systemic awareness, and the intelligence of living systems, our work honours the interconnected nature of all wellbeing. We support the gentle exploration of personal, family, and intergenerational stories, creating opportunities for greater understanding, regulation, resilience, and belonging.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">Guided by the principles of waiora, we nurture the restoration of mauri, uphold mana, and support the reweaving of relationships across mind, body, heart, spirit, whānau, whenua, and community. Together, we create pathways for healing that strengthen connection, awaken innate wisdom, and empower people to move forward with hope, purpose, and a renewed sense of belonging.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -329,49 +334,45 @@
 <section class="sp" style="background:#C4824A;padding:120px 0;text-align:center;">
   <div class="cw" style="max-width:820px;margin:0 auto;padding:0 56px;">
     <div data-reveal>
-      <p style="font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:20px;">Our Vision</p>
-      <span style="font-family:'Cormorant Garamond',serif;font-size:72px;line-height:.55;color:rgba(255,255,255,.08);display:block;margin-bottom:28px;">"</span>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,36px);font-weight:300;font-style:italic;color:rgba(255,255,255,.88);line-height:1.62;margin-bottom:40px;">A world where every person, regardless of their history or the weight they carry, has access to healing that honours their full humanity — body, mind, wairua, and whakapapa.</p>
+      <p style="font-size:10px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#FBEBD6;margin-bottom:14px;">Tō Mātou Aronga Whakamua</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.4vw,44px);font-weight:300;color:white;letter-spacing:-.01em;margin-bottom:36px;">Our Vision</h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,36px);font-weight:300;font-style:italic;color:white;line-height:1.62;text-wrap:pretty;">An Aotearoa where right relationship between horses, people, whakapapa, whenua, and te taiao nurtures mauri, strengthens connection, and supports the wellbeing of present and future generations.</p>
     </div>
   </div>
 </section>
 
-<!-- WHAT SETS US APART -->
+<!-- GUIDING PRINCIPLES -->
 <section class="sp" style="background:#FDFAF6;padding:120px 0;">
   <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
     <div data-reveal style="margin-bottom:72px;">
-      <p style="font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#B07845;margin-bottom:18px;">What Sets Us Apart</p>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.5vw,56px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;line-height:1.15;max-width:600px;">Three pillars that<br>ground everything we do.</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4.5vw,56px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;line-height:1.15;max-width:600px;">Our Guiding Principles</h2>
     </div>
     <div style="display:flex;flex-direction:column;gap:2px;align-items:center;padding-right:28px;">
-      <!-- Pillar 1 -->
       <div class="tc" style="display:flex;align-items:stretch;">
         <div data-reveal style="flex:0 0 52%;background:white;padding:64px 72px;border:1px solid #EDE4D8;">
           <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:24px;">01</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:#C4824A;margin-bottom:16px;line-height:1.1;">Culturally Grounded<br>Healing</h3>
-          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;">We work through tikanga Māori, honouring whakapapa, whanaungatanga, and mātauranga Māori to support healing that is deeply rooted, meaningful, and aligned with identity. Our work does not strip people of who they are — it returns them to it.</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:#C4824A;margin-bottom:16px;line-height:1.1;">Culturally Grounded<br>Practice</h3>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;">Our work is guided by Te Ao Māori, honouring whakapapa, whanaungatanga, tikanga, and mātauranga Māori as integral to wellbeing. We recognise that our sense of self is shaped by our identity, culture, relationships, and belonging. We create opportunities for people to reconnect with their whakapapa, deepen their understanding of themselves, and strengthen their sense of belonging.</p>
         </div>
         <div style="flex:1;overflow:hidden;min-height:400px;position:relative;">
           <img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/1725598796040-51VC2VH416UB7TWRJXWW/Hongi.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"/>
         </div>
       </div>
-      <!-- Pillar 2 -->
       <div class="tc" style="display:flex;align-items:stretch;flex-direction:row-reverse;">
         <div data-reveal style="flex:0 0 52%;background:#F7F3EE;padding:64px 72px;border:1px solid #EDE4D8;">
           <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:24px;">02</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:#C4824A;margin-bottom:16px;line-height:1.1;">Holistic,<br>Whole-Person Care</h3>
-          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;">Our approach supports mind, body, and spirit — recognising that true wellbeing comes from addressing the full human experience, not just isolated challenges. We collaborate with doctors, psychologists, and psychiatrists to bring integrated care to every person we serve.</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:#C4824A;margin-bottom:16px;line-height:1.1;">Holistic, Whole-Person<br>Understanding</h3>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;">We recognise that human experience extends beyond thoughts and emotions. Our wellbeing is shaped by the relationship between tinana, hinengaro, wairua, and whānau, and our connection to whenua and te taiao. Our approach honours these interconnected dimensions, drawing on trauma-informed relational practice and collaborating with clinical professionals where appropriate.</p>
         </div>
         <div style="flex:1;overflow:hidden;min-height:400px;position:relative;">
           <img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/1709901301387-136FH6TFO78INW4RRDA4/Boys+and+Frank.JPG" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;"/>
         </div>
       </div>
-      <!-- Pillar 3 -->
       <div class="tc" style="display:flex;align-items:stretch;">
         <div data-reveal style="flex:0 0 52%;background:white;padding:64px 72px;border:1px solid #EDE4D8;">
           <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:#C8B9A8;margin-bottom:24px;">03</p>
-          <h3 style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:#C4824A;margin-bottom:16px;line-height:1.1;">Equine-Led<br>Connection</h3>
-          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;">Through equine-supported therapy, we utilise the horse-human connection to foster emotional regulation, trust, and resilience in a safe and powerful way. The horses do not perform — they respond honestly to what is present, creating a mirror that words alone cannot.</p>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:#C4824A;margin-bottom:16px;line-height:1.1;">Relational Horse–Human<br>Connection</h3>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;">Horses are integral to our kaupapa. We recognise them as sentient beings and respected participants in the relationships that unfold within our herd. Through their presence, responses, and interactions, horses can invite awareness, curiosity, and new ways of relating. We don't prescribe what a horse's behaviour means; instead, we create space for people to notice, explore, and discover their own understanding through relationship.</p>
         </div>
         <div style="flex:1;overflow:hidden;min-height:400px;position:relative;">
           <img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/6108d69f-be70-45ef-afd1-462352dec2f9/Abby+Indi.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"/>
@@ -383,13 +384,12 @@
 
 <!-- CTA BAND -->
 <section style="background:#EDE4D8;padding:120px 0;text-align:center;">
-  <div class="cw" style="max-width:600px;margin:0 auto;padding:0 56px;">
+  <div class="cw" style="max-width:640px;margin:0 auto;padding:0 56px;">
     <div data-reveal>
-      <p style="font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#9B8B7B;margin-bottom:20px;">Explore Offerings</p>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,56px);font-weight:400;color:#1C1C1A;line-height:1.1;letter-spacing:-.01em;margin-bottom:40px;">See How We Can<br>Work Together</h2>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,5vw,56px);font-weight:400;color:#1C1C1A;line-height:1.1;letter-spacing:-.01em;margin-bottom:24px;">Ways We Work Together</h2>
+      <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0 auto 40px;max-width:520px;">Explore the different ways to connect with H.E.A.R.T.S. through individual work, whānau support, professional development, and shared learning.</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-        <a href="services.html" class="btn-dk" style="display:inline-flex;align-items:center;padding:18px 52px;background:#C4824A;color:white;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:background .3s;">Our Services</a>
-        <a href="mission.html" style="display:inline-flex;align-items:center;padding:18px 52px;background:transparent;border:1px solid #9B8B7B;color:#5A524A;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:all .3s;">Our Mission</a>
+        <a href="services.html" class="btn-dk" style="display:inline-flex;align-items:center;padding:18px 52px;background:#C4824A;color:white;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;transition:background .3s;">Discover Ways to Connect</a>
       </div>
     </div>
   </div>
@@ -399,30 +399,46 @@
 <section style="background:#FDFAF6;padding:120px 0;">
   <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
     <div data-reveal style="text-align:center;margin-bottom:72px;">
-      <p style="font-size:9px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:#B07845;margin-bottom:18px;">Governance</p>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,52px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;margin-bottom:20px;">Board of Trustees</h2>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#9B8B7B;max-width:520px;margin:0 auto;">H.E.A.R.T.S. Charitable Trust (CC51224) is governed by a dedicated board of trustees committed to our mission of healing and wellbeing.</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;color:#7A6B5C;max-width:620px;margin:0 auto;line-height:1.6;text-wrap:pretty;">H.E.A.R.T.S. Charitable Trust (CC51224) is guided by a dedicated Board of Trustees who provide stewardship, oversight, and strategic direction in support of our vision, mission, and kaupapa.</p>
+    </div>
+    <div data-reveal class="tc" style="display:flex;align-items:stretch;background:white;border:1px solid #EDE4D8;margin-bottom:3px;">
+      <div class="tc-full" style="width:38%;flex-shrink:0;overflow:hidden;">
+        <img src="jenny.jpg" alt="Jenny Gibbons, Chairperson" style="display:block;width:100%;height:100%;min-height:420px;object-fit:cover;object-position:center 25%;"/>
+      </div>
+      <div style="flex:1;min-width:0;padding:56px 64px;">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:#1C1C1A;line-height:1.1;margin-bottom:8px;">Jenny Gibbons</h3>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#C4824A;margin-bottom:28px;">Chairperson, Board of Trustees</p>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">Jenny founded H.E.A.R.T.S. Charitable Trust from a deep belief in the importance of connection, belonging, and the restoration of right relationship between people, horses, one another, and the natural world.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">With a lifetime of experience alongside horses and more than 16 years facilitating horse–human and whānau-centred work, Jenny brings together practical wisdom, relational insight, and a profound respect for what horses can teach us about ourselves and our connections with others.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">Jenny views horses as active participants in the healing process, recognising them as wise and sentient beings with their own way of perceiving and responding to the world. When we are willing to slow down and pay attention, horses can become profound teachers, helping us deepen awareness, restore trust, and reconnect with ourselves, one another, and the living world around us.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">Her approach weaves together Te Ao Māori, mātauranga Māori, trauma-informed practice, whānau constellation work, and the understanding that healing does not happen in isolation. Rather, it emerges through relationship, belonging, and the opportunity to reconnect with our innate knowing.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">Through H.E.A.R.T.S., Jenny is committed to creating spaces where individuals and whānau are met with dignity, compassion, and respect, and where healing, connection, and wellbeing can emerge in ways that honour both people and place.</p>
+        </div>
+      </div>
+    </div>
+    <div data-reveal class="tc" style="display:flex;align-items:stretch;background:white;border:1px solid #EDE4D8;margin-bottom:3px;">
+      <div class="tc-full" style="width:38%;flex-shrink:0;background:#F0EBE3;display:flex;align-items:center;justify-content:center;min-height:240px;">
+        <div style="width:120px;height:120px;border-radius:50%;background:#EDE4D8;border:2px solid #D9CFC3;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:'Cormorant Garamond',serif;font-size:44px;color:#B9A894;">AJG</span>
+        </div>
+      </div>
+      <div style="flex:1;min-width:0;padding:56px 64px;">
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:#1C1C1A;line-height:1.1;margin-bottom:8px;">Abigail James-Gibbons</h3>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#C4824A;margin-bottom:28px;">Secretary, Board of Trustees</p>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">Abigail joined the Board of H.E.A.R.T.S. Charitable Trust because she believes that meaningful change begins with connection, understanding, and belonging. She values the importance of creating spaces where people feel seen, heard, and respected, and is passionate about supporting a kaupapa that honours the many pathways through which healing and growth can occur.</p>
+          <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;text-wrap:pretty;margin:0;">As Secretary, Abigail supports the Trust's governance and administrative responsibilities, bringing care, organisation, and integrity to the role. She is committed to contributing to an organisation that places the dignity, mana, and wellbeing of individuals and whānau at the centre of its work.</p>
+        </div>
+      </div>
     </div>
     <div class="tc" style="display:flex;gap:3px;">
-      <div data-reveal style="flex:1;background:white;padding:48px 40px;border:1px solid #EDE4D8;text-align:center;">
-        <div style="width:72px;height:72px;border-radius:50%;background:#F0EBE3;border:2px solid #EDE4D8;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#C8B9A8;">T</span>
-        </div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:rgba(255,255,255,.85);margin-bottom:6px;">Trustee</h3>
-        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#C4824A;">Chairperson</p>
-      </div>
-      <div data-reveal data-d="1" style="flex:1;background:#F0EBE3;padding:48px 40px;border:1px solid #EDE4D8;text-align:center;">
+      <div data-reveal data-d="2" style="flex:1;background:white;padding:48px 40px;border:1px solid #EDE4D8;text-align:center;">
         <div style="width:72px;height:72px;border-radius:50%;background:#EDE4D8;border:2px solid #D9CFC3;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;">
           <span style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#C8B9A8;">T</span>
         </div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:rgba(255,255,255,.85);margin-bottom:6px;">Trustee</h3>
-        <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#C4824A;">Secretary</p>
-      </div>
-      <div data-reveal data-d="2" style="flex:1;background:white;padding:48px 40px;border:1px solid #EDE4D8;text-align:center;">
-        <div style="width:72px;height:72px;border-radius:50%;background:#F0EBE3;border:2px solid #EDE4D8;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Cormorant Garamond',serif;font-size:28px;color:#C8B9A8;">T</span>
-        </div>
-        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:rgba(255,255,255,.85);margin-bottom:6px;">Trustee</h3>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:#1C1C1A;margin-bottom:6px;">Trustee</h3>
         <p style="font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#C4824A;">Treasurer</p>
       </div>
     </div>

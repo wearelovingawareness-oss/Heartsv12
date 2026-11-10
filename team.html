@@ -58,6 +58,9 @@
     .na:hover{opacity:1!important;font-weight:700!important;letter-spacing:.06em!important;transform:scale(1.08);transition:all .2s ease!important}
     .mm{display:none;position:fixed;inset:0;z-index:998;background:#F3E6D3;flex-direction:column;align-items:center;justify-content:center;gap:40px}
     .mm.open{display:flex}.mm a{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:400;color:#1C1C1A;transition:color .2s}.mm a:hover{color:#B07845}
+    .hr-bio-img{align-self:flex-start;position:sticky;top:110px;height:min(78vh,680px)}
+    .hr-bio-img img{height:100%!important;min-height:0!important}
+    .hr-bio>div:not(.hr-bio-img){border:1px solid #EDE4D8!important}
     .ib{overflow:hidden}.ib img{transition:transform 1s ease}.ib:hover img{transform:scale(1.05)!important}
     .btn-dk:hover{background:#A36035!important}
     @keyframes fU{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
@@ -68,7 +71,7 @@
       .ftc{flex-direction:column!important;gap:40px!important}
       .sp{padding:80px 0!important}
       .hr-bio{flex-direction:column!important}
-      .hr-bio-img{width:100%!important;height:380px!important}
+      .hr-bio-img{width:100%!important;height:380px!important;position:relative!important;top:auto!important;align-self:stretch!important;flex:none!important}
     }
   
     /* Dropdowns */
@@ -253,7 +256,7 @@
   </a>
   <div class="nl" style="display:flex;align-items:center;gap:32px;">
     <div class="dd"><span class="na dd-label" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#C4824A;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .3s;">About<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="mission.html">Our Mission</a><a href="about.html">About &amp; Values</a><a href="team.html" style="color:#C4824A;border-left-color:#C4824A;">Our Team &amp; Horses</a></div></div>
-    <div class="dd"><span class="na dd-label" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .3s;">Our Work<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="services.html">Services</a><a href="programs.html">Programs</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></div>
+    <div class="dd"><span class="na dd-label" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;cursor:pointer;display:inline-flex;align-items:center;gap:3px;transition:all .3s;">Our Work<span class="dd-arr">▾</span></span><div class="dd-menu"><a href="services.html">Services</a><a href="programs.html">Programmes</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></div>
     <a href="testimonials.html" class="na" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;transition:all .3s;">Testimonials</a>
     <a href="index.html#contact-section" class="na" style="font-size:15px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#7A7060;transition:all .3s;">Contact</a>
   </div>
@@ -266,7 +269,7 @@
   <button id="hn-close" style="position:absolute;top:28px;right:32px;background:none;border:none;font-size:28px;color:#9B8B7B;cursor:pointer;line-height:1;">✕</button>
   <a href="index.html"><span class="mm-reo">Nau Mai</span>Welcome</a>
   <details><summary><span class="mm-reo">Mō Mātou</span>About<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="mission.html">Our Mission</a><a href="about.html">About &amp; Values</a><a href="team.html">Our Team &amp; Horses</a></div></details>
-  <details><summary><span class="mm-reo">Ā Mātou Mahi</span>Our Work<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="services.html">Services</a><a href="programs.html">Programs</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></details>
+  <details><summary><span class="mm-reo">Ā Mātou Mahi</span>Our Work<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="services.html">Services</a><a href="programs.html">Programmes</a><a href="get-involved.html#research">Research</a><a href="gallery.html">Gallery</a></div></details>
   <a href="testimonials.html"><span class="mm-reo">Ngā Kupu Tautoko</span>Testimonials</a>
   <details><summary><span class="mm-reo">Whakapā Mai</span>Contact<span class="mm-arr">▾</span></summary><div class="mm-sub"><a href="index.html#contact-section">Contact Us</a><a href="index.html#contact-section" data-subject="Te Mauri Whakapapa o te Hōiho Wānanga">Te Mauri Whakapapa o te Hōiho Wānanga</a><a href="index.html#contact-section" data-subject="Professional Training / Supervision">Professional Training &amp; Supervision</a><a href="index.html#contact-section" data-subject="Workshops & Retreats">Workshops &amp; Retreats</a><a href="get-involved.html#volunteer">Volunteering</a><a href="index.html#contact-section" data-subject="Koha / Donation">Support Us / Koha</a><a href="index.html#contact-section" data-subject="General Enquiry">General Enquiry</a></div></details>
   <a href="get-involved.html#koha"><span class="mm-reo">Koha</span>Donate</a>
@@ -293,15 +296,23 @@
   <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
     <div class="hr-bio tc" style="display:flex;gap:0;align-items:stretch;">
       <div data-reveal class="hr-bio-img ib" style="flex:0 0 48%;overflow:hidden;">
-        <img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/826816b4-ffeb-40e6-9f04-8d324fb623ea/vqPE6.jpg" alt="Tomahawk" style="width:100%;height:100%;object-fit:cover;min-height:520px;"/>
+        <img src="tomahawk.jpg" alt="Tomahawk, a brown and white pinto, lying in a summer paddock" style="width:100%;height:100%;object-fit:cover;min-height:520px;object-position:30% center;"/>
       </div>
       <div data-reveal data-d="1" style="flex:1;background:white;padding:72px 64px;display:flex;flex-direction:column;justify-content:center;border:1px solid #EDE4D8;border-left:none;">
         <p style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C8B9A8;margin-bottom:20px;">01 — Ngā Hōiho</p>
         <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;margin-bottom:8px;line-height:1.05;">Tomahawk</h2>
-        <p style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:36px;">Protector · Teacher · Heart Horse</p>
-        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">He is the perfect blend of charm and courage. With a calm and sweet nature, he wins hearts effortlessly, giving off an impression that he's as gentle as a lamb. But beneath that serene exterior lies a fierce protector — when it comes to his herd, Tomahawk is unwaveringly loyal and ready to rise to any occasion.</p>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:14px;">Protector · Teacher · Heart Horse</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#7A6B5C;line-height:1.4;margin-bottom:32px;">The Expression of the Unique Self</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Tomahawk is a horse who carries his own story. Curious, distinctive, and wonderfully individual, he engages with the world in a way that quietly encourages others to do the same.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">More than simply participating in the H.E.A.R.T.S. programme, Tomahawk is a relational teacher. Through his sensitivity, wisdom, and grounded presence, he invites people to reconnect with themselves and with the deeper truth of who they are. He has a remarkable gift for connection, often becoming a catalyst for moments of genuine warmth, emotional presence, and heartfelt engagement.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Whether through quiet companionship, gentle grooming, or simply standing alongside someone in need of connection, Tomahawk demonstrates that relationship does not always require words. He reminds us that healing and belonging can emerge through presence alone. In a world that often asks us to perform, achieve, or become something different, Tomahawk offers something simpler and far more profound: the invitation to just be.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Never one to overlook something unusual, Tomahawk is known for noticing what others might miss. With his wonderfully inquisitive nature and vivid imagination, he is always keeping an eye out for the unexpected, including the occasional dragon lurking in the shadows!</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Within the H.E.A.R.T.S. herd, Tomahawk represents the unique self: the part of us that exists beyond expectations, labels, roles, and the pressure to fit in. He reminds us that our individuality is not something to hide or overcome, but something to honour and embrace.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Tomahawk teaches that belonging is not earned through becoming someone else. Rather, true belonging emerges when we are given the freedom and safety to be fully ourselves.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Through his quiet authenticity, Tomahawk becomes a mirror, reflecting back the innate worth, uniqueness, and individuality that lives within each of us. His presence encourages people to reconnect with their own identity, trust their own way of being, and remember that they are enough exactly as they are.</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#1C1C1A;line-height:1.55;font-weight:400;margin-top:8px;">Tomahawk reminds us that we don't need to become someone else to belong. We simply need the freedom to be ourselves.</p>
         <div style="margin:32px 0;padding-left:24px;border-left:2px solid #B07845;">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#5A524A;line-height:1.7;font-weight:300;">When Jenny went to buy him she asked him if he wanted to come home with her. He tucked his head under her arm. The rest is history…</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#5A524A;line-height:1.7;font-weight:300;">When Jenny went to buy him, she asked him if he wanted to come home with her. He tucked his head under her arm. The rest is history…</p>
         </div>
       </div>
     </div>
@@ -331,16 +342,111 @@
   <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
     <div class="hr-bio tc" style="display:flex;gap:0;align-items:stretch;">
       <div data-reveal class="hr-bio-img ib" style="flex:0 0 48%;overflow:hidden;">
-        <img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/1732844877240-TCEJ8CV67LYK0FBWS6V4/Abi+and+Olly.jpg" alt="Ollie" style="width:100%;height:100%;object-fit:cover;min-height:520px;"/>
+        <img src="ollie.png" alt="Ollie, a chestnut horse, resting his forehead against a woman kneeling in the paddock" style="width:100%;height:100%;object-fit:cover;min-height:520px;object-position:45% center;"/>
       </div>
       <div data-reveal data-d="1" style="flex:1;background:white;padding:72px 64px;display:flex;flex-direction:column;justify-content:center;border:1px solid #EDE4D8;border-left:none;">
         <p style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C8B9A8;margin-bottom:20px;">03 — Ngā Hōiho</p>
         <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;margin-bottom:8px;line-height:1.05;">Ollie</h2>
-        <p style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:36px;">Koroua · Elder · Heart Horse</p>
-        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">At 33 years old, Ollie is our treasured Koroua — a horse with a lifetime of memories and achievements. Known for his exceptional kindness and gentle demeanour, he's a 650kg bundle of sweetness who has earned the love of everyone around him.</p>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:14px;">Koroua · Elder · Heart Horse</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#7A6B5C;line-height:1.4;margin-bottom:32px;">The Wisdom of Presence</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">At 35 years old, Ollie is the beloved elder of the H.E.A.R.T.S. herd. Over a lifetime of partnership with people, he has become something far greater than a horse. He is a quiet teacher, a trusted companion, and for many, a place of refuge.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">There is a depth to Ollie that is difficult to put into words. His strength is neither loud nor demanding. It does not seek attention or recognition. Instead, it is found in his unwavering presence, his patience, and his remarkable ability to simply be with another without judgement or expectation.</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#1C1C1A;line-height:1.55;font-weight:400;margin:8px 0 26px;">Ollie asks nothing of anyone.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">He does not require explanations, stories, or reasons. Whether someone arrives carrying joy, grief, uncertainty, or exhaustion, Ollie meets them exactly where they are. Beside him, people often discover they no longer need to hold themselves together quite so tightly.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Within H.E.A.R.T.S., we often say that if life has been heavy, if someone has left you feeling diminished, or if the world simply feels too much, you can always go and have an Ollie hug. Somehow, he has a way of absorbing the noise and returning people to themselves. His presence offers a rare sense of safety, reassurance, and belonging — not because he tries to fix anything, but because he reminds us that we are already enough.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Whether he is standing quietly beside a three-year-old meeting a horse for the first time or gently accompanying a ninety-three-year-old rediscovering connection, Ollie brings the same steadfast kindness to every encounter. We trust him completely, and time and again he proves worthy of that trust.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Within the H.E.A.R.T.S. herd, Ollie represents Strength. Not strength as power, control, or force, but strength expressed through groundedness, gentleness, consistency, and presence.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">He is also the embodiment of healthy masculinity — the kind that protects without controlling, leads without dominating, and creates safety simply through its presence. Ollie teaches that true strength is not found in being the biggest voice in the room. It is found in the ability to remain calm, trustworthy, and present when others need us most.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">He reminds us that some of life's greatest healers do not offer advice, answers, or solutions. They simply stay.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Through every season of his life, Ollie continues to show us that wisdom is not measured by what we know, but by how we make others feel when they are in our presence. And sometimes, when words are no longer needed, all you need is an Ollie hug.</p>
         <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Retirement suits him beautifully as he enjoys a well-deserved, carefree life. Ollie's earlier years were filled with adventure as Jenny's main horse — together they hunted, evented, and trekked, with his last great journey being through the rugged Kaimanawa country alongside Aotearoa's wild horses.</p>
         <div style="margin-top:8px;padding-left:24px;border-left:2px solid #B07845;">
           <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#5A524A;line-height:1.7;font-weight:300;">If H.E.A.R.T.S. has a heart horse, it is unquestionably Ollie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDI -->
+<section style="background:#FDFAF6;padding:0 0 120px;">
+  <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
+    <div class="hr-bio tc" style="display:flex;gap:0;align-items:stretch;flex-direction:row-reverse;">
+      <div data-reveal class="hr-bio-img ib" style="flex:0 0 48%;overflow:hidden;">
+        <img src="indi.png" alt="Indi, a bay mare, lying in the paddock with a person resting against her" style="width:100%;height:100%;object-fit:cover;min-height:520px;object-position:40% center;"/>
+      </div>
+      <div data-reveal data-d="1" style="flex:1;background:white;padding:72px 64px;display:flex;flex-direction:column;justify-content:center;border:1px solid #EDE4D8;border-right:none;">
+        <p style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C8B9A8;margin-bottom:20px;">04 — Ngā Hōiho</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;margin-bottom:8px;line-height:1.05;">Indi</h2>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:36px;">Self-Acceptance · Leadership · Boundaries</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Indi is the matriarch of the herd, a mare whose presence is both commanding and deeply grounding. She carries herself with quiet confidence, knowing exactly who she is and where she stands. Rarely demanding attention, she nevertheless receives it. Her communication is subtle yet unmistakable, often expressed through the smallest gesture — a shift in posture, a softening of the eye, or the slightest flick of an ear. Her messages are clear, and she expects them to be understood and respected.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Indi embodies the essence of self-acceptance. She does not seek approval, nor does she reshape herself to meet the expectations of others. Instead, she offers a living example of what it means to stand comfortably in one's own truth. Through her presence, she teaches the importance of honouring our boundaries, respecting ourselves, and recognising that our worth is not dependent on external validation.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">As an established leader within the herd, Indi creates stability through consistency. She understands relationship, personal space, and the delicate balance between connection and autonomy. Her leadership is not driven by dominance, but by clarity. She knows when to invite, when to guide, and when to firmly communicate a boundary. The herd trusts her because she is authentic, predictable, and true to herself.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">For those who spend time with her, Indi offers powerful lessons in personal leadership. She invites us to consider where we give away our power, where we struggle to say no, and where we compromise our truth in order to belong. Through her quiet wisdom, she demonstrates that healthy relationships are built not through people-pleasing, but through honesty, respect, and clear communication.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Indi reminds us that belonging does not require us to become someone else. True belonging begins when we feel safe enough to be ourselves. Her presence encourages us to stand gently but firmly in our own space, trusting that authenticity creates its own sense of connection.</p>
+        <div style="margin-top:14px;padding-left:24px;border-left:2px solid #B07845;">
+          <p style="font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#B07845;margin-bottom:10px;">Indi's Wisdom</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#5A524A;line-height:1.7;font-weight:300;">"Know who you are. Honour your boundaries. Trust your voice. You do not need permission to take up your rightful space."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUS -->
+<section style="background:#F0EBE3;padding:0 0 120px;">
+  <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
+    <div class="hr-bio tc" style="display:flex;gap:0;align-items:stretch;">
+      <div data-reveal class="hr-bio-img ib" style="flex:0 0 48%;overflow:hidden;">
+        <img src="venus.png" alt="Venus, a black and white pinto mare, standing in a paddock" style="width:100%;height:100%;object-fit:cover;min-height:520px;object-position:55% center;"/>
+      </div>
+      <div data-reveal data-d="1" style="flex:1;background:white;padding:72px 64px;display:flex;flex-direction:column;justify-content:center;border:1px solid #EDE4D8;border-left:none;">
+        <p style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C8B9A8;margin-bottom:20px;">05 — Ngā Hōiho</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,64px);font-weight:400;color:#1C1C1A;letter-spacing:-.01em;margin-bottom:8px;line-height:1.05;">Venus</h2>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:36px;">Love · Self-Worth · Unconditional Acceptance</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Venus represents love, though perhaps not in the way people might expect.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">A beautiful mare, she naturally draws people towards her. Many want to stroke her, connect with her, or shower her with affection. Yet Venus is just as likely to walk away. She isn't interested in receiving attention simply because someone wishes to give it.</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#1C1C1A;line-height:1.55;font-weight:400;margin:8px 0 26px;">Venus knows who she is.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">She has a strong sense of self and is particular about how she likes things. A little bit of a princess, she enjoys her grooming, her meals, and having things just so. She is also clear about her boundaries. Those who have offered energy work have occasionally received a very definite response: no thank you. Venus does not accept something merely because it is offered, nor can she be persuaded into what doesn't feel right for her.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Yet there is another side to her.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Speak about a grandparent's love for a grandchild and her eyes soften instantly. They become gentle, warm and deeply expressive, as though she recognises a different quality of love altogether.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Perhaps the greatest gift Venus offers is an opportunity to explore our relationship with unconditional love, including how we love and accept ourselves.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">We often want others to receive our affection, but can we allow them to be exactly who they are? Can we honour their boundaries, choices and individuality without needing them to be different? And can we offer ourselves the same grace?</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Venus does not perform affection to make someone else feel comfortable. She does not abandon herself to meet another's expectations.</p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#1C1C1A;line-height:1.55;font-weight:400;margin:8px 0 26px;">She is simply Venus.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Like all the horses in the H.E.A.R.T.S. herd, Venus carries her own wisdom and way of being.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">She reminds us that love is not ownership, expectation or obligation. Sometimes love is allowing another to be entirely themselves.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">And perhaps the deepest form of unconditional love begins there, with acceptance of others, and of ourselves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRUZ HORSE -->
+<section style="background:#FDFAF6;padding:0 0 120px;">
+  <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
+    <div class="hr-bio tc" style="display:flex;gap:0;align-items:stretch;flex-direction:row-reverse;">
+      <div class="hr-bio-img" style="flex:1;overflow:hidden;position:relative;">
+        <img src="cruz.png" alt="Cruz, a bay horse with a white blaze and white socks, standing in the paddock" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:35% center;"/>
+      </div>
+      <div data-reveal style="flex:1;background:white;padding:64px 60px;border:1px solid #EDE4D8;border-right:none;display:flex;flex-direction:column;justify-content:center;">
+        <p style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C8B9A8;margin-bottom:16px;">06 — Ngā Hōiho · Son of Mystique</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;color:#1C1C1A;letter-spacing:-.02em;margin-bottom:12px;">Cruz</h2>
+        <p style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:20px;">Truth · Persistence · Authenticity</p>
+        <div style="width:32px;height:1px;background:#FFC30B;margin-bottom:28px;"></div>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Cruz holds a very special place within the H.E.A.R.T.S. family. He is the only horse we have bred ourselves to become part of the programme, and he has spent his entire life here. He has never known another home, growing up alongside the people, horses, and relationships that have shaped the H.E.A.R.T.S. story.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">His story also carries a unique piece of equine history. His sire was Florian, a horse featured in <em>The Lord of the Rings</em> films, and Cruz was Florian's final foal born with Mystique. While this connection is a special part of his legacy, it is Cruz's own character and presence that make him truly remarkable.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Cruz embodies Truth. He has an extraordinary ability to bring honesty into a situation, whether people are ready for it or not. If there is something that needs attention, Cruz is unlikely to overlook it. In true Cruz fashion, he often persists until his message has been received. Where some horses may offer a subtle hint before moving on, Cruz is more inclined to return to the lesson, gently but consistently inviting deeper awareness.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Through him, we learn that truth is not always comfortable. Sometimes it asks us to pause, reflect, and acknowledge what we may have been avoiding. Sometimes it requires patience, courage, and a willingness to look beyond our first reaction. Cruz teaches us that genuine growth often begins with honesty — both with ourselves and with others.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Alongside his determination is a wonderfully endearing side that reminds us not to take life too seriously. Cruz is known for sleeping completely flat out, often looking so convincingly lifeless that concerned onlookers have wondered if something is wrong. Yet a moment later, the unmistakable sound of his snoring confirms that he is simply enjoying a very deep and well-earned sleep.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">When working with people, Cruz invites authenticity. He encourages us to stop hiding behind who we think we should be and to reconnect with what is real. His presence reminds us that truth is not about judgement. It is about alignment. It is about living in a way that honours who we are and what we know to be true.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Born here, raised here, and woven into the fabric of H.E.A.R.T.S., Cruz carries a unique place within our herd and our story. Through his persistence, honesty, and unmistakable personality, he reminds us that some messages are too important to be ignored.</p>
+        <div style="margin:10px 0 24px;padding-left:24px;border-left:2px solid #B07845;">
+          <p style="font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:#B07845;margin-bottom:10px;">Cruz's Wisdom</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#5A524A;line-height:1.7;font-weight:300;">"Listen to the truth the first time. If you don't, life may keep bringing it back until you're ready to hear it."</p>
+        </div>
+        <div style="background:#F7F3EE;padding:20px 24px;border-left:3px solid #FFC30B;">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#7A6E60;line-height:1.65;">"Cruz grew up watching healing happen. Now he is part of it."</p>
         </div>
       </div>
     </div>
@@ -368,7 +474,7 @@
         </div>
       </div>
       <div data-reveal data-d="1" style="flex:1;">
-        <p style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C8B9A8;margin-bottom:20px;">Founder &amp; Director</p>
+        <p style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C8B9A8;margin-bottom:20px;">Founder</p>
         <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,60px);font-weight:400;color:#1C1C1A;margin-bottom:8px;">Jenny</h2>
         <p style="font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#B07845;margin-bottom:36px;">Founder · Facilitator · Equine Practitioner</p>
         <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Jenny founded H.E.A.R.T.S. from a deep personal and professional calling — to create a space where those who carry the heaviest weight can find their way back to themselves, their whakapapa, and to life.</p>
@@ -379,22 +485,26 @@
   </div>
 </section>
 
-<!-- CRUZ HORSE -->
-<section style="background:#F7F3EE;padding:0 0 80px;">
+<!-- ELENA -->
+<section style="background:#F7F3EE;padding:120px 0;">
   <div class="cw" style="max-width:1200px;margin:0 auto;padding:0 56px;">
-    <div class="tc" style="display:flex;gap:0;align-items:stretch;flex-direction:row-reverse;">
-      <div style="flex:1;overflow:hidden;min-height:420px;position:relative;">
-        <img src="https://images.squarespace-cdn.com/content/v1/623820c2d1350755a59b6d22/1732844877240-TCEJ8CV67LYK0FBWS6V4/Abi+and+Olly.jpg?format=1200w" alt="Cruz" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%;"/>
-      </div>
-      <div data-reveal style="flex:1;background:white;padding:64px 60px;border:1px solid #EDE4D8;border-right:none;display:flex;flex-direction:column;justify-content:center;">
-        <p style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C8B9A8;margin-bottom:16px;">Our Herd · Son of Mystique</p>
-        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;color:#1C1C1A;letter-spacing:-.02em;margin-bottom:8px;">Cruz</h2>
-        <div style="width:32px;height:1px;background:#FFC30B;margin-bottom:28px;"></div>
-        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Born into the H.E.A.R.T.S. herd, Cruz carries the gentle wisdom of his mother Mystique in his blood. He has grown up surrounded by healing work, and this shows in his quiet confidence and easy presence with people of all ages.</p>
-        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:28px;">Young and still finding his way, Cruz brings a sense of playfulness and curiosity to sessions — often the first to approach newcomers, lowering the barrier of unfamiliarity with a warm, generous spirit. He reminds us that healing can also be joyful.</p>
-        <div style="background:#F7F3EE;padding:20px 24px;border-left:3px solid #FFC30B;">
-          <p style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#7A6E60;line-height:1.65;">"Cruz grew up watching healing happen. Now he is part of it."</p>
+    <div class="tc" style="display:flex;gap:80px;align-items:center;flex-direction:row-reverse;">
+      <div data-reveal style="flex:0 0 42%;">
+        <div class="ib" style="position:relative;">
+          <img src="elena.png" alt="Elena with a grey horse under a blue sky" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:40% center;"/>
         </div>
+      </div>
+      <div data-reveal data-d="1" style="flex:1;">
+        <p style="font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#C8B9A8;margin-bottom:20px;">Equine Practitioner</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5vw,60px);font-weight:400;color:#1C1C1A;margin-bottom:36px;">Elena</h2>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Born and raised in Beijing, China, Elena comes from a rich Chinese and Russian heritage and was immersed from an early age in a blend of cultures, languages, and perspectives. Educated at the Russian Embassy School and having travelled internationally throughout her childhood, she developed a broad worldview and a deep appreciation for the many ways people connect with, experience, and understand the world around them.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Fluent in Mandarin, Russian, and English, Elena brings a unique cultural and linguistic perspective to her work, alongside a lifelong love of horses and a genuine commitment to the wellbeing of others.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">After completing high school in 2017, Elena followed her passion for horses to Aotearoa New Zealand, where she undertook tertiary study in equine science. In 2021, she graduated from Massey University with a Bachelor of Agricultural Science, majoring in Equine.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">It was during her studies that Elena first became connected with H.E.A.R.T.S., undertaking her university internship with the Trust. What began as an opportunity to gain practical industry experience soon evolved into a much deeper connection with the kaupapa, the horses, and the people who make H.E.A.R.T.S. such a special place.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Following graduation, Elena was delighted to return and work alongside Jenny, bringing together her academic knowledge, practical equine expertise, and a heartfelt desire to support the healing and growth journeys of others.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Over the past five years, Elena has become an integral part of the H.E.A.R.T.S. whānau. Her work combines a deep understanding of horse behaviour and welfare with a quiet, compassionate presence that helps create meaningful and transformative experiences for the individuals, tamariki, rangatahi, and whānau who engage with the programme.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;margin-bottom:18px;">Having completed her equine degree and accrued more than five years of hands-on experience working alongside clients within the H.E.A.R.T.S. model, Elena is now a certified H.E.A.R.T.S. Practitioner, qualified to facilitate client sessions. This certification recognises not only her equine knowledge and practical skills, but also her commitment to the values, philosophy, and relational approach that underpin the H.E.A.R.T.S. kaupapa.</p>
+        <p style="font-size:15px;line-height:1.88;color:#5A524A;font-weight:300;">Having made New Zealand her home, Elena continues to bring her unique background, knowledge, and perspective to a kaupapa centred on connection, relationship, restoration of mauri, and the healing potential of horse–human relationships.</p>
       </div>
     </div>
   </div>

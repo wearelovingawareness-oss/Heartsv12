@@ -38,7 +38,7 @@
 <x-dc>
 <helmet>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Privacy Statement — H.E.A.R.T.S. Charitable Trust</title>
+  <title>Privacy Statement - H.E.A.R.T.S. Charitable Trust</title>
 <meta name="description" content="Privacy statement for H.E.A.R.T.S. Charitable Trust.">
   <link rel="icon" type="image/png" href="hearts-logo-sm.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -354,5 +354,17 @@ document.addEventListener('click',function(ev){var e=els();if(!e.b||!e.mm||inner
 document.addEventListener('keydown',function(ev){if(ev.key==='Escape')close();});
 addEventListener('scroll',function(){if(innerWidth>=769)close();},{passive:true});})();</script>
 <style id="mm-center">@media(max-width:768px){html body #hn-mm.mm{justify-content:safe center!important;align-items:center!important;padding:110px 24px 40px!important;overflow-y:auto}html body #hn-close{display:none!important}}</style>
+
+<!-- BACK TO TOP -->
+<button id="btt" type="button" aria-label="Back to top" title="Back to top" style="position:fixed;right:24px;bottom:24px;z-index:900;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:#3D5A72;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 20px rgba(28,28,26,.18);opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s,transform .3s,visibility .3s,background .2s;" onmouseover="this.style.background='#C4824A'" onmouseout="this.style.background='#3D5A72'">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+</button>
+<script>
+(function(){var b=document.getElementById('btt');if(!b)return;
+function u(){var d=document.documentElement,max=d.scrollHeight-window.innerHeight,on=max>0&&window.scrollY>max*0.5;
+b.style.opacity=on?'1':'0';b.style.visibility=on?'visible':'hidden';b.style.transform=on?'translateY(0)':'translateY(12px)';}
+window.addEventListener('scroll',u,{passive:true});window.addEventListener('resize',u);u();
+b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})();
+</script>
 </body>
 </html>
